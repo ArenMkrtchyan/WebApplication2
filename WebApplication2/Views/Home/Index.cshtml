@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ProductViewModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <a asp-action="Add" asp-controller="Home">Add</a>
+    <table border="1">
+        @foreach(var item in Model){
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Discount</td>
+                <td>@item.NewPrice</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
